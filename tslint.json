@@ -1,0 +1,10 @@
+{
+  "extends": "tslint-config-prettier",
+  "rules": {
+    "prefer-const": true,
+    "no-var-keyword": true,
+    "curly": true,
+    "no-this-assignment": true,
+    "triple-equals": true
+  }
+}
