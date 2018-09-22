@@ -47,6 +47,9 @@ module.exports = function(env) {
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx']
         },
+        devServer: {
+            contentBase: './public'
+        },
         module: {
             rules: [
                 {
