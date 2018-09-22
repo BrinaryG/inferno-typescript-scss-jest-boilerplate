@@ -27,6 +27,7 @@ module.exports = function(env) {
     }
 
     Plugins.push(new ExtractTextPlugin({ filename: 'main.css' }));
+    //Plugins.push(new webpack.HotModuleReplacementPlugin());
 
     var config = {
         mode: env.mode,
@@ -41,6 +42,7 @@ module.exports = function(env) {
         },
         output: {
             path: path.join(__dirname, 'public', 'dist'),
+            publicPath: '/dist/',
             filename: '[name].js'
         },
         plugins: Plugins,
@@ -48,7 +50,9 @@ module.exports = function(env) {
             extensions: ['.js', '.jsx', '.ts', '.tsx']
         },
         devServer: {
-            contentBase: './public'
+            contentBase: './public',
+            publicPath: '/dist/'
+            //hot: true
         },
         module: {
             rules: [

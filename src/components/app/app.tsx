@@ -4,7 +4,11 @@ interface IState {}
 
 interface IProps {}
 
-export class App extends Component<IProps, IState> {
+export function getOne() {
+    return 1;
+}
+
+export default class App extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
     }
